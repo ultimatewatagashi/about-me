@@ -4,11 +4,23 @@
 ---------------------- */
 
 .body {
+    /*書体設定*/
     font-family: Arial, sans-serif;
+    /*行の高さ指定*/
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+}
+
+a {
+    /*<a>タグの傍線の指定*/
+    text-decoration : none;
+}
+
+img {
+    /*画像の大きさの指定*/
+    max-width: 100%;
 }
 
 .header {
