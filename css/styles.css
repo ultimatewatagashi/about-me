@@ -166,3 +166,16 @@ img {
     min-height: 80vh;            /* セクションの高さ。お好みで調整 */
     margin-left: 20vw;            /* 左側の余白を10vwに設定 */
 }
+/* ここにフェードインアニメーションを追加 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px); /* 下から40pxずらして開始 */
+    animation: fadeIn 1.2s ease 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 元の位置に戻す */
+    }
+}
