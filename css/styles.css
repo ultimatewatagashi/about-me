@@ -29,7 +29,7 @@ img {
 }
 
 .header {
-    background: rgba(51, 51, 51, 0.1); /* 0.7は透明度。0に近いほど透明 */
+    background: rgba(51, 51, 51, 0.05); /* 0.7は透明度。0に近いほど透明 */
     color: #221814;
     padding: .5rem 2.5rem 0.5rem 2.5rem; /* 左右に2remの余白を追加 */
     text-align: left;
@@ -42,12 +42,12 @@ img {
 .footer {
     text-align: center;
     padding: 1rem; /* 余白を小さく */
-    background: rgba(51, 51, 51, 0.1); 
+    background: rgba(51, 51, 51, 0.05); 
     color: #221814;
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-size: 0.9rem; /* 文字を小さく */
+    font-size: 1.2rem; /* 文字を小さく */
 }
 
 .nav {
@@ -68,7 +68,7 @@ img {
 }
 
 .nav ul li a {
-    font-size: 1.5rem;  /*文章のフォントサイズを変更*/
+    font-size: 2.5rem;  /*文章のフォントサイズを変更*/
     text-align: center;  /* 文字を中央に配置 */
     margin-top: 2rem;  /* 上に2remの余白を追加 */
     color: #221814;  /* 文字色を指定 */
@@ -122,7 +122,7 @@ img {
     display: block;
 }
 .logo-text {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #221814;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -141,4 +141,28 @@ img {
 }
 .main-nav a:hover {
     color: #0bd
+}
+
+.page-title,
+#self-introduction {
+    text-align: left;            /* 文字の左側を揃える */
+    margin: 0;
+    width: 100%;                 /* 親の幅に合わせる（中央寄せのまま左揃え） */
+    max-width: 1000px;            /* 最大幅を指定（お好みで） */
+}
+.page-title {
+    font-size: 3rem;           /* h2文字サイズ変更*/
+    margin-bottom: 0.9rem; /* ←ここで間隔を調整　*/
+}
+#self-introduction {
+    font-size: 2rem;           /* h3文字サイズ変更 */
+}
+
+.title-row {
+    display: flex;
+    flex-direction: column;      /* 縦並び */
+    align-items: flex-start;     /* 横方向：左寄せ*/
+    justify-content: center;     /* 縦方向：中央寄せ */
+    min-height: 80vh;            /* セクションの高さ。お好みで調整 */
+    margin-left: 20vw;            /* 左側の余白を10vwに設定 */
 }
