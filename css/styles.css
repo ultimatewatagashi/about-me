@@ -41,18 +41,18 @@ img {
 
 .footer {
     text-align: center;
-    padding: 1rem; /* 余白を小さく */
+    padding: 1rem;         /* 余白を小さく */
     background: rgba(51, 51, 51, 0.05); 
     color: #221814;
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-size: 1.2rem; /* 文字を小さく */
+    font-size: 1.2rem;     /* 文字を小さく */
 }
 
 .nav {
     margin-left: auto;     /* 追加：右側に寄せる */
-    padding-left: 1.5rem; /* ナビの左側に余白を追加 */
+    padding-left: 1.5rem;  /* ナビの左側に余白を追加 */
 }
 
 .nav ul {
@@ -63,15 +63,15 @@ img {
 }
 
 .nav ul li {
-    display: inline;
-    margin-right: 3rem; 
+    display: inline;        /* 追加：リストアイテムを横並びに */
+    margin-right: 3rem;     /* 追加：リストアイテムの間隔を広げる */
 }
 
 .nav ul li a {
-    font-size: 2.5rem;  /*文章のフォントサイズを変更*/
-    text-align: center;  /* 文字を中央に配置 */
-    margin-top: 2rem;  /* 上に2remの余白を追加 */
-    color: #221814;  /* 文字色を指定 */
+    font-size: 2.5rem;      /*文章のフォントサイズを変更*/
+    text-align: center;     /* 文字を中央に配置 */
+    margin-top: 2rem;       /* 上に2remの余白を追加 */
+    color: #221814;       /* 文字色を指定 */
     text-decoration: none;  /* 下線を消す */
 }
 
@@ -118,7 +118,7 @@ img {
 .logo {
     width: 85px;
     height: auto;
-    margin: 0 1.5rem 0 0; /* 上下の余白を0にして右だけ余白 */
+    margin: 0 1.5rem 0 0;   /* 上下の余白を0にして右だけ余白 */
     display: block;
 }
 .logo-text {
@@ -152,7 +152,7 @@ img {
 }
 .page-title {
     font-size: 3rem;           /* h2文字サイズ変更*/
-    margin-bottom: 0.9rem; /* ←ここで間隔を調整　*/
+    margin-bottom: 0.9rem;      /* ←ここで間隔を調整　*/
 }
 #self-introduction {
     font-size: 2rem;           /* h3文字サイズ変更 */
@@ -179,3 +179,15 @@ img {
         transform: translateY(0); /* 元の位置に戻す */
     }
 }
+/* 背景画像 */
+/*画像がないため無効化
+.cover {
+    object-fit: fill;
+
+    background-position: center;
+    height: 800px; /* 高さを800pxに設定 
+}
+.cover-home {
+    background-image: url(../images/jikka.png);
+}
+/*
