@@ -21,39 +21,58 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     
+    <!-- 背景処理読み込み　-->
+        <link rel="stylesheet" href="css/background.css">
+<!--
+        <div class="slider-container">
+            <div class="slider"></div>
+        </div>
+        <script src="js/slide.js"></script>  JavaScript -->
         
     </head>
-    <body class="body cover cover-home">
-        <header class="header">
-            <h1 class="logo-title">
-               <a href="index.html" class="logo-link">
-                    <img class="logo" src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
-                    <span class="logo-text">ひとり語り帖</span>
-                </a>
-            </h1>
-            <nav class="nav">
-                <ul>
-                    <!-- <li><a href="#home">表紙(HOME)</a></li> -->
-                    <li><a href="self-introduction.html">自己紹介</a></li>
-                    <li><a href="hobby">趣味・興味</a></li>
-                    <li><a href="recordsofancestors">ご先祖の記録</a></li>
-                    <li><a href="inquiry.html">お問い合わせ</a></li>
 
-                </ul>
-            </nav>
-        </header>
+    <body class="body cover cover-home">
+        <div class="background">
+            
+            <header class="header">
+                <h1 class="logo-title">
+                   <a href="index.html" class="logo-link">
+                        <img class="logo" src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
+                        <span class="logo-text">ひとり語り帖</span>
+                    </a>
+                </h1>
+                <nav class="nav">
+                    <ul>
+                        <!-- <li><a href="#home">表紙(HOME)</a></li> -->
+                        <li><a href="self-introduction.html">自己紹介</a></li>
+                        <li><a href="hobby">趣味・興味</a></li>
+                        <li><a href="recordsofancestors">ご先祖の記録</a></li>
+                        <li><a href="inquiry.html">お問い合わせ</a></li>
+    
+                    </ul>
+                </nav>
+            </header>
+
+            <!--背景-->
+            <div class="slider-container">
+                <div class="slider"></div>
+            </div>
+            <script src="js/slide.js"></script> <!-- 背景スライド用js -->
+            
+            <div class="title-row">
+                <h2 class="page-title fade-in">ようこそ、わたしの間へ</h2>
+                <h3 id="self-introduction" class="fade-in">
+                <span class="section-content"></span>
+                </h3>
+            </div>
+    
+            <script src="js/self-introduction.js"></script>
+    
+            <footer class="footer">
+                <p class="footer-text">© 2025 ひとり語り帖</p>
+            </footer>
+        </div>
     </body>
 
-<div class="title-row">
-    <h2 class="page-title fade-in">ようこそ、わたしの間へ</h2>
-    <h3 id="self-introduction" class="fade-in">
-        <span class="section-content"></span>
-    </h3>
-</div>
-<script src="js/self-introduction.js"></script>
-
-    <footer class="footer">
-        <p class="footer-text">© 2025 ひとり語り帖</p>
-    </footer>
 </html>
 

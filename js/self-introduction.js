@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // ランダムで挨拶を選択
     const greeting = greetingList[Math.floor(Math.random() * greetingList.length)];
 
-    const h3Text = `${greeting}\n拙きサイトへお越しいただき、誠にありがとうございます。\nここでは、私のこれまでの歩みや、思いの丈などを、\nささやか綴らせていただいております。\nお時間の許すかぎり、どうぞごゆるりとお楽しみくださいませ。`;
+    const h3Text = `${greeting}\n拙きサイトへお越しいただき、誠にありがとうございます。\nここでは、私のこれまでの歩みや、思いの丈などを、\nささやかに綴らせていただいております。\nお時間の許すかぎり、どうぞごゆるりとお楽しみくださいませ。`;
     const h3span = document.querySelector("#self-introduction .section-content");
     h3span.textContent = "";
 

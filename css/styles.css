@@ -29,7 +29,7 @@ img {
 }
 
 .header {
-    background: rgba(51, 51, 51, 0.075); /* 0.7は透明度。0に近いほど透明 */
+    background: rgba(48, 48, 48, 0.000005); /* 0.7は透明度。0に近いほど透明 */
     color: #221814;
     padding: .5rem 2.5rem 0.5rem 2.5rem; /* 左右に2remの余白を追加 */
     text-align: left;
@@ -180,15 +180,3 @@ img {
         transform: translateY(0); /* 元の位置に戻す */
     }
 }
-/* 背景画像 */
-/*画像がないため無効化
-.cover {
-    object-fit: fill;
-
-    background-position: center;
-    height: 800px; /* 高さを800pxに設定 
-}
-.cover-home {
-    background-image: url(../images/jikka.png);
-}
-/*
