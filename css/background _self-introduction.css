@@ -1,0 +1,31 @@
+
+
+.slider-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+}
+
+.background {
+  position: fixed;         /* 画面全体に張り付け */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('your-image.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;             /* 前面のテキストより後ろに */
+}
+
+.slider {
+  width: 200vw; /* 2倍の幅でスライド */
+  height: 100%;
+  background: url('../images/jikka_summer.png') repeat-x center center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: opacity 1s;
+}
