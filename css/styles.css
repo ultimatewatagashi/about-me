@@ -4,6 +4,11 @@
 /* 共通部分 
 ---------------------- */
 
+/* 文字サイズを画面幅に合わせて可変に */
+html {
+    font-size: clamp(14px, 2vw, 20px);
+}
+
 .body {
     /*書体設定*/
     font-family: "Noto Serif JP", sans-serif;
@@ -25,13 +30,13 @@ a {
 
 img {
     /*画像の大きさの指定*/
-    max-width: 90%;
+    max-width: 4vw;
 }
 
 .header {
     background: rgba(48, 48, 48, 0.0005); /* 0.7は透明度。0に近いほど透明 */
     color: #221814;
-    padding: .5rem 2.5rem 0.5rem 2.5rem; /* 左右に2remの余白を追加 */
+    padding: .5vw 2.5vw 0.5vw 2.5vw; /* 左右に5%の余白を追加 */
     text-align: left;
     display: flex;         /* 追加：ヘッダー内を横並びに */
     align-items: center;   /* 追加：縦位置を揃える */
@@ -41,18 +46,18 @@ img {
 
 .footer {
     text-align: center;
-    padding: 1rem;         /* 余白を小さく */
+    padding: 1vw;         /* 余白を小さく */
     background: rgba(255, 255, 255, 0.5); 
     color: #221814;
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-size: 1.2rem;     /* 文字を小さく */
+    font-size: 1.2vw;     /* 文字を小さく */
 }
 
 .nav {
     margin-left: auto;     /* 追加：右側に寄せる */
-    padding-left: 1.5rem;  /* ナビの左側に余白を追加 */
+    padding-left: 1.5vw;  /* ナビの左側に1.5%余白を追加 */
 }
 
 .nav ul {
@@ -60,32 +65,44 @@ img {
     padding: 0;
     display: flex;         /* 追加：横並びに */
     align-items: center;   /* 追加：縦位置を揃える */
+    align-items: center; /* 中央揃えで縦の隙間を最小に */
+    gap: 2vw;                 /* リンク間の間隔を2vwに */
 }
 
 .nav ul li {
-    display: inline;        /* 追加：リストアイテムを横並びに */
-    margin-right: 3rem;     /* 追加：リストアイテムの間隔を広げる */
+    display: inline-block;        /* 追加：リストアイテムを横並びに */
+    margin-right: 0;     /* 追加：リストアイテムの間隔を広げる (不要？）*/
 }
 
 .nav ul li a {
-    font-size: 2.5rem;      /*文章のフォントサイズを変更*/
+    font-size: 1.9vw;      /*文章のフォントサイズを変更*/
     font-weight: bold;    /* 文字を太く */
     text-align: center;     /* 文字を中央に配置 */
-    margin-top: 2rem;       /* 上に2remの余白を追加 */
+    margin-top: 2vw;       /* 上に2%の余白を追加 */
     color: #221814;       /* 文字色を指定 */
     text-decoration: none;  /* 下線を消す */
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 600vw) {
     .header, .footer {
-        padding: 1rem;
+        padding: 1vw;
     }
 
     .nav ul li {
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.5vw 0;
     }
+}
+
+/* クリックアニメーション */
+.nav ul li.animate-click {
+    animation: clickShrink 0.4s;
+}
+@keyframes clickShrink {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.85); }
+    100% { transform: scale(1); }
 }
 
 
@@ -103,7 +120,7 @@ img {
 /* ヘッダー
 ---------------------- */
 .page-header {
-    padding-top: .5rem;
+    padding-top: .4vw;
 }
 .logo-title {
     margin: 0;
@@ -117,24 +134,24 @@ img {
     color: inherit;
 }
 .logo {
-    width: 85px;
+    width: 85vw;
     height: auto;
-    margin: 0 1.5rem 0 0;   /* 上下の余白を0にして右だけ余白 */
+    margin: 0 1.5vw 0 0;   /* 上下の余白を0にして右だけ余白 */
     display: block;
 }
 .logo-text {
-    font-size: 3rem;
+    font-size: 2vw;
     color: #221814;
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05vw;
     margin: 0;
     padding: 0;
 }
 .main-nav {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
-    font-size: 1.5rem;
+    gap: 2.5vw;
+    font-size: 1.5vw;
     list-style: none;
 }
 .main-nav a {
@@ -149,14 +166,14 @@ img {
     text-align: left;            /* 文字の左側を揃える */
     margin: 0;
     width: 100%;                 /* 親の幅に合わせる（中央寄せのまま左揃え） */
-    max-width: 1000px;            /* 最大幅を指定（お好みで） */
+    max-width: 1000vw;            /* 最大幅を指定（お好みで） */
 }
 .page-title {
-    font-size: 3rem;           /* h2文字サイズ変更*/
-    margin-bottom: 0.9rem;      /* ←ここで間隔を調整　*/
+    font-size: 3vw;           /* h2文字サイズ変更*/
+    margin-bottom: 0.9vw;      /* ←ここで間隔を調整　*/
 }
 #self-introduction {
-    font-size: 2rem;           /* h3文字サイズ変更 */
+    font-size: 2vw;           /* h3文字サイズ変更 */
 }
 
 .title-row {
@@ -170,7 +187,7 @@ img {
 /* ここにフェードインアニメーションを追加 */
 .fade-in {
     opacity: 0;
-    transform: translateY(40px); /* 下から40pxずらして開始 */
+    transform: translateY(4vw); /* 下から4％ずらして開始 */
     animation: fadeIn 1.2s ease 0.2s forwards;
 }
 
@@ -180,3 +197,124 @@ img {
         transform: translateY(0); /* 元の位置に戻す */
     }
 }
+ /* ここにフェードアウトアニメーションを追加 */ 
+.fade-out {
+    animation: fadeOut 1.2s ease forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(4vw); /* 下に4%幅で消える */
+    }
+}
+
+
+/* モバイル用プログラム 
+---------------------- */
+
+@media (max-width: 768px) {
+    .logo {
+        width: 10vw;      /* ロゴ画像を大きくする（例: 20vw） */
+        max-width: none;
+    }
+
+    .logo-text {
+        font-size: 4vw; /* ここを調整。小さくしたい場合は3vwなどに */
+    }
+    .header {
+        padding: 2vw 4vw;
+    }
+    .footer {
+        font-size: 2.5vw;
+        padding: 1.5vw 0;
+    }
+}
+
+/* ハンバーガーメニュー用 */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+}
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s;
+}
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+.menu-icon::before {
+    top: -10px;
+}
+.menu-icon::after {
+    top: 10px;
+}
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 6vw;      /* スマホでは画面幅の6% */
+    }
+    .nav ul {
+        flex-direction: column; /* 縦並び */
+        align-items: flex-start;
+    }
+    .nav ul li a {
+        font-size: 5vw;      /* スマホでは画面幅の5% */
+    }
+}
+
+/* スマホ時のみハンバーガーメニュー表示 */
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60vw;
+        right: 0;
+        width: 200vw;
+        box-shadow: 0 2vw 8vw rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    .nav.open ul {
+        display: flex;
+    }
+}
+@media (min-width: 769px) {
+    .menu-btn {
+        display: none;
+    }
+    .nav ul {
+        display: flex !important;
+        position: static;
+        background: none;
+        box-shadow: none;
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+
+/* デスクトップ用プログラム */
+
