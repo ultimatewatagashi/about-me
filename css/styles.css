@@ -9,6 +9,8 @@ html {
     font-size: clamp(14px, 2vw, 20px);
 }
 
+
+
 .body {
     /*書体設定*/
     font-family: "Noto Serif JP", sans-serif;
@@ -94,6 +96,35 @@ img {
     text-decoration: none;  /* 下線を消す */
 }
 
+section {
+    background: rgba(255,255,255,0.8); /* ← 半透明の白 */
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 0.5em 0.5em;  /* ← 縦横の余白を小さめに */
+    margin: 2em auto;   /* ← 上下の余白も小さめに */
+    max-width: 95vw; /* ← 横幅を広げる */
+    max-height: 60vw; /* ← 高さを広げる */
+    width: 70%; /* ← 横幅を広げる */
+    position: relative;
+    z-index: 1; /* 背景より前面に */
+}
+
+section h2 {
+    font-size: 2em;    /* 少し大きめに */
+    margin-bottom: 0.5em;/* 見出し下の余白を少し小さめに */
+    color: #221814;      /* 見出しの文字色 */
+    font-weight: bold;   /* 見出しを太字に */
+    border-bottom: 2px solid #240105; /* ← 下線を追加 */
+    padding-bottom: 0.2em;            /* 下線との間隔 */
+}
+
+section p {
+    font-size: 1.4em;      /* 少し大きめに */
+    line-height: 1.8;      /* 行間を広めに */
+    margin: 0.7em 0;       /* 上下の余白を調整 */
+    letter-spacing: 0.05em;/* 文字間隔を少し広げる */
+    color: #333;           /* 文字色をやや濃く */
+}
 
 @media (max-width: 600vw) {
     .header, .footer {
@@ -240,6 +271,22 @@ img {
 /* self-introductionセクション
 ---------------------- */
 
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* 画像を中央寄せ */
+#image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;    /* 上下の余白はお好みで */
+    margin-bottom: 1em;
+    max-width: 220px;   /* お好みで画像サイズ調整 */
+    width: 60vw;        /* スマホ対応。お好みで調整 */
+    height: auto;
+}
 /* hobbyセクション
 ---------------------- */
 
@@ -259,6 +306,11 @@ img {
     
 }
 
+big {
+    font-size: 5em; /* bigタグのフォントサイズを5倍に */
+    font-weight: bold; /* 太字にする */
+    color: #221814; /* 文字色を指定 */
+}
 
 /* ハンバーガーメニュー用 */
 .menu-btn {

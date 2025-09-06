@@ -33,57 +33,91 @@
         
     </head>
 
-    <body class="body cover cover-home">
-        <div class="background">
-            
-            <header class="header">
-                <h1 class="logo-title">
-                   <a href="index.html" class="logo-link">
-                        <img class="logo"src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
-                        <span class="logo-text">ひとり語り帖</span>
-                    </a>
-                </h1>
-                <button class="menu-btn" id="menu-btn" aria-label="メニューを開く">
-                    <span class="menu-icon"></span>
-                </button>
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a href="index.html">表</a></li>
-                        <li><a href="self-introduction.html">自己紹介</a></li>
-                        <li><a href="hobby.html" style="color: #B11226 !important;">趣味・興味</a></li>
-                        <li><a href="recordsofancestors">ご先祖の記録</a></li>
-                        <li><a href="inquiry.html">お問い合わせ</a></li>
-    
-                    </ul>
-                </nav>
-            </header>
+    <body class="body self-introduction">
+        <header class="header">
+            <h1 class="logo-title">
+               <a href="index.html" class="logo-link">
+                    <img class="logo" src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
+                    <span class="logo-text">ひとり語り帖</span>
+                </a>
+            </h1>
+            <button class="menu-btn" id="menu-btn" aria-label="メニューを開く">
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">表</a></li> 
+                    <li><a href="self-introduction.html" >自己紹介</a></li>
+                    <li><a href="hobby.html"style="color: #B11226 !important;">趣味・興味</a></li>
+                    <li><a href="recordsofancestors">ご先祖の記録</a></li>
+                    <li><a href="inquiry.html">お問い合わせ</a></li>
 
-            <!--背景-->
+                </ul>
+            </nav>
+        </header>
+
+        <!--背景-->
             <div class="slider-container">
                 <div class="slider"></div>
             </div>
-            <script src="js/slide_hobby.js"></script> <!-- 背景スライド用js -->
-            
-            <section class="hobby-section">
-                <div style="background" >
-                    <!-- サイクリング枠-->
-                    <div class="cycling">
-                        <h1 class="hobby-title">サイクリング</h1>
-                        <img class="hobby-image" src="images/mybike.jpg" alt="Mybike">
-                        <p class=""></p>
-                    </div>
-                </div>
+            <script src="js/slide.js"></script> <!-- 背景スライド用js -->
+        
+        <div class="title-row">
+                <h2 class="page-title fade-in">〜趣味・興味編〜</h2>
+            </div>
+
+        <main>
+
+            <section id="aboutme" class="section title-row main-text-title">
+                <h2>趣味について</h2>
+                <p>
+                    私の趣味は、遊戯（ゲーム）、そして自転車の旅でございます。
+                </p>
+                <p>
+                    近頃は、ことさら自転車に心を奪われております。
+                </p>
+                <p>
+                    これらの趣味は、私の生活に彩りを与え、日々の楽しみとなっております。
+                </p>
             </section>
-    
-            <script src="js/self-introduction.js"></script>
-            <script src="js/hunbargermenu.js"></script>
+
+            <section id="game" class="section title-row main-text-title">
+                <h2>遊戯（ゲーム）について</h2>
+                <p>
+                    とりわけ、撃ち合いの遊び（FPS）や広き世界を巡る遊戯（オープンワールド）を嗜んでおります。
+                </p>
+                <p>
+                    「遊びの中でも、『Apex Legends』や『Fortnite』、そして『原神』を好んでいます。
+                </p>
+                <p>
+                    これらの遊戯は、私に戦略的思考と迅速な判断力を養わせ、また広大な仮想世界を探索することで、現実の世界とは異なる視点を提供してくれます。
+                </p>
+            </section>
+
+            <section id="bicycle" class="section title-row main-text-title">
+                <h2>自転車の旅について</h2>
+                <p>
+                    自転車の旅は、とても魅力的な趣味です。
+                </p>
+                <p>
+                    自然の中や町中を自転車で駆け抜けることで、心身ともにリフレッシュされます。
+                </p>
+                <p>
+                    これからも、自転車の旅を通じて新たな発見を楽しんでいきたいと思います。
+                </p>
+            </section>
+        </main>
+
+        <script src="js/age.js"></script>
+        <script src="js/self-introduction.js"></script>
+        <script src="js/hunbargermenu.js"></script>
 
             <footer class="footer">
                 <p class="footer-text">© 2025 ひとり語り帖</p>
             </footer>
-        </div>
-        <script src="js/btn.js"></script>
+            <script src="js/btn.js"></script>
     </body>
+
 
 </html>
 
