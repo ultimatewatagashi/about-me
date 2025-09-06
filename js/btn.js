@@ -12,7 +12,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ハンバーガーメニュー開閉
-document.getElementById('menu-btn').addEventListener('click', function() {
-    document.getElementById('nav').classList.toggle('open');
-});

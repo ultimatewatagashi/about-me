@@ -313,14 +313,8 @@ img {
         display: none;
         flex-direction: column;
         background: #fff;
-        /*position: absolute;
-        top: 100%;
-        right: 0;
-        width: 70vw;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        z-index: 1001;
-        padding: 20vw 0;
-        */
+        align-items: flex-start;
+
     }
 
     .nav ul li a {
@@ -369,18 +363,11 @@ img {
         min-height: 100vw;            /* セクションの高さ。お好みで調整 */
         margin-left: 5vw;            /* 左側の余白を5vwに設定 */
     }
-}
 
-
-/* スマホ用 */
-@media (max-width: 768px) {
     .logo-text {
         font-size: 6vw;      /* スマホでは画面幅の6% */
     }
-    .nav ul {
-        flex-direction: column; /* 縦並び */
-        align-items: flex-start;
-    }
+
     .nav ul li a {
         font-size: 5vw;      /* スマホでは画面幅の5% */
     }
@@ -394,8 +381,5 @@ img {
         text-align: left;        /* テキストを左寄せ */
     }
 }
-
-
-
 
 
