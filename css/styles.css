@@ -97,17 +97,18 @@ img {
 }
 
 section {
-    background: rgba(255,255,255,0.8); /* ← 半透明の白 */
+     background: rgba(255,255,255,0.8);
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 0.5em 0.5em;  /* ← 縦横の余白を小さめに */
-    margin: 2em auto;   /* ← 上下の余白も小さめに */
-    max-width: 95vw; /* ← 横幅を広げる */
-    max-height: 60vw; /* ← 高さを広げる */
-    width: 70%; /* ← 横幅を広げる */
+    padding: 1.2em 1em;
+    margin: 1.5em auto;
+    max-width: 95vw;
+    width: 98%;
     position: relative;
-    z-index: 1; /* 背景より前面に */
+    z-index: 1;
+    box-sizing: border-box; /* 追加推奨 */
 }
+
 
 section h2 {
     font-size: 2em;    /* 少し大きめに */
