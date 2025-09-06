@@ -15,7 +15,7 @@
 
     <!-- オリジナルCSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/background _hobby.css">
 
     <!-- Googleフォント -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,56 +33,75 @@
         
     </head>
 
-    <body class="body cover cover-home">
-        <div class="background">
-            
-            <header class="header">
-                <h1 class="logo-title">
-                   <a href="index.html" class="logo-link">
-                        <img class="logo"src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
-                        <span class="logo-text">ひとり語り帖</span>
-                    </a>
-                </h1>
-                <button class="menu-btn" id="menu-btn" aria-label="メニューを開く">
-                    <span class="menu-icon"></span>
-                </button>
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a href="#home" >表</a></li>
-                        <li><a href="self-introduction.html">自己紹介</a></li>
-                        <li><a href="hobby.html">趣味・興味</a></li>
-                        <li><a href="recordsofancestors.html"style="color: #B11226 !important;">ご先祖の記録</a></li>
-                        <li><a href="inquiry.html">お問い合わせ</a></li>
-                        <li><a href="test.html">test</a></li>
-    
-                    </ul>
-                </nav>
-            </header>
+    <body class="body self-introduction">
+        <header class="header">
+            <h1 class="logo-title">
+               <a href="index.html" class="logo-link">
+                    <img class="logo" src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
+                    <span class="logo-text">ひとり語り帖</span>
+                </a>
+            </h1>
+            <button class="menu-btn" id="menu-btn" aria-label="メニューを開く">
+                <span class="menu-icon"></span>
+            </button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">表</a></li> 
+                    <li><a href="self-introduction.html" >自己紹介</a></li>
+                    <li><a href="hobby.html">趣味・興味</a></li>
+                    <li><a href="recordsofancestors.html"style="color: #B11226 !important;">ご先祖の記録</a></li>
+                    <li><a href="inquiry.html">お問い合わせ</a></li>
 
-            <!--背景-->
+                </ul>
+            </nav>
+        </header>
+
+        <!--背景-->
             <div class="slider-container">
                 <div class="slider"></div>
             </div>
             <script src="js/slide.js"></script> <!-- 背景スライド用js -->
-            
-            <div class="title-row">
-                <h2 class="page-title fade-in">ようこそ、わたしの間へ</h2>
-                <h3 id="self-introduction" class="fade-in">
-                <span class="section-content"></span>
-                </h3>
+        
+        <div class="title-row">
+                <h2 class="page-title fade-in">〜ご先祖の記録編〜</h2>
             </div>
-            
-            
-            <script src="js/self-introduction.js"></script>
-            <script src="js/hunbargermenu.js"></script>
+
+        <main>
+
+            <section id="aboutme" class="section title-row main-text-title">
+                <h2>ご先祖について</h2>について</h2>
+                <p>
+                    あまり、詳しく調べられなかったので大まかな情報です。
+                </p>
+                <p>
+                    私の先祖は、天皇から姓を賜った由緒ある家系です。小さいですが、領主をしていました。
+                </p>
+                <p>
+                    しかし、本家が断絶してしまい、私の家系は分家として生き延びていました。
+                </p>
+                <p>
+                    私の家のお墓は、分家の分だけですが、文字が読めるもので一番古いものは寛政３年でした。
+                </p>
+            </section>
+
+            <section id="bicycle" class="section title-row main-text-title">
+                <h2>関連URL</h2>
+                <p>
+                    <a href="https://www.hb.pei.jp/shiro/tanba/katakari-jyo/" target="_blank" rel="noopener noreferrer">宇都宮氏 - Wikipedia</a>
+                </p>
+            </section>
+        </main>
+
+        <script src="js/age.js"></script>
+        <script src="js/self-introduction.js"></script>
+        <script src="js/hunbargermenu.js"></script>
 
             <footer class="footer">
                 <p class="footer-text">© 2025 ひとり語り帖</p>
             </footer>
-        </div>
-        <script src="js/btn.js"></script>
-        
+            <script src="js/btn.js"></script>
     </body>
+
 
 </html>
 

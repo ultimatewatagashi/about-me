@@ -1,0 +1,11 @@
+.title {
+    margin-top: 7vw; /* ヘッダーの高さ＋余白分。お好みで調整 */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .title {
+        margin-top: 14vw; /* スマホ用はさらに余白を増やす */
+    }
+}

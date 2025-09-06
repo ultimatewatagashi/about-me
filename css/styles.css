@@ -219,6 +219,8 @@ section p {
     font-size: 1.5vw;           /* h3文字サイズ変更 */
 }
 
+
+
 .title-row {
     display: flex;
     flex-direction: column;      /* 縦並び */
