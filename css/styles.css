@@ -23,6 +23,7 @@ html {
     background-color: #f4f4f4;
 }
 
+
 a {
     /*<a>タグの傍線の指定*/
     text-decoration : none;
@@ -34,15 +35,22 @@ img {
 }
 
 .header {
-    background: rgba(48, 48, 48, 0.0005); /* 0.7は透明度。0に近いほど透明 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 他の要素より前面に */
+    background: rgba(255, 255, 255, 0.5); /* 0.7は透明度。0に近いほど透明 */
     color: #221814;
     padding: .5vw 2.5vw 0.5vw 2.5vw; /* 左右に5%の余白を追加 */
+    height: 5vw;        /* ←高さを明示的に指定（例：5vw） */
     text-align: left;
     display: flex;         /* 追加：ヘッダー内を横並びに */
     align-items: center;   /* 追加：縦位置を揃える */
     align-items: center; /* 中央揃えで縦の隙間を最小に */
     justify-content: space-between; /* 追加：左右に配置 */
 }
+
 
 .footer {
     text-align: center;
@@ -54,14 +62,17 @@ img {
     bottom: 0;
     font-size: 1.2vw;     /* 文字を小さく */
 }
+    
 
 .nav {
     margin-left: auto;     /* 追加：右側に寄せる */
     padding-left: 1.5vw;  /* ナビの左側に1.5%余白を追加 */
+    align-items: center;
 }
 
 .nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
     display: flex;         /* 追加：横並びに */
     align-items: center;   /* 追加：縦位置を揃える */
@@ -184,6 +195,18 @@ img {
     min-height: 40vw;            /* セクションの高さ。お好みで調整 */
     margin-left: 20vw;            /* 左側の余白を20vwに設定 */
 }
+
+.menu-btn {
+    display: none; /* デフォルトでは非表示 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+}
+
 /* ここにフェードインアニメーションを追加 */
 .fade-in {
     opacity: 0;
@@ -209,27 +232,6 @@ img {
     }
 }
 
-.selfie {
-    display: block; /* 確実に表示されるように設定 */
-    width: auto;    /* 必要に応じてサイズを調整 */
-    opacity: 1;     /* 透明度を確実に1に設定 */
-    animation: none !important; /* アニメーションを無効化 */
-    position: relative;      /* 他の要素と重ならないように設定 */
-    z-index: 1000;           /* 最前面に表示 */
-    
-    /* 円形フェードアウトの設定 */
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: cover;
-
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%);
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: cover;
-}
-
-
 .highlight {
     color: red; /* テキストの色を赤に変更 */
 }
@@ -238,58 +240,10 @@ img {
 /* self-introductionセクション
 ---------------------- */
 
-.self-introduction .title-row {
-    display: flex;                /* 横並びにする */
-    flex-direction: row;          /* 横方向に配置 */
-    align-items: center;          /* 縦方向を中央揃え */
-    justify-content: center;      /* 横方向を中央揃え */
-    gap: 2vw;                     /* 要素間の間隔を調整 */
-    margin: 0 auto;               /* 左右の余白を自動で中央寄せ */
-}
-
-.self-introduction .selfie {
-    display: block;
-    margin: 0 auto; /* 中央寄せ */
-    position: relative;
-    right: -15%; /* 中心より右側に移動（調整可能） */
-    transform: translateX(20%); /* 必要に応じて微調整 */
-    width: 40% !important; /* 画像の幅を50%に設定 */
-    max-width: 500px; /* 最大幅を300pxに制限 */
-    height: auto; /* アスペクト比を維持 */
-}
-
-.self-introduction .page-title {
-    text-align: left;     /* テキストを中央寄せ */
-    margin: 0;              /* 余白をリセット */
-}
-
-.self-introduction dl {
-    display: grid;
-    font-size: 2.2vw; /* デフォルトのテキストサイズ */
-    grid-template-columns: 1fr 1fr; /* 左右均等に配置 */
-    justify-content: center;       /* 全体を中央揃え */
-    gap: 16px 32px;                 /* 行間と列間の余白 */
-    text-align: center;            /* テキストを中央揃え */
-    margin: 0 auto;                /* 左右の余白を自動で中央寄せ */
-    width: 80%;                    /* 必要に応じて幅を調整 */
-}
-
-.self-introduction dt {
-    font-weight: bold;
-    text-align: right;             /* ラベルを右寄せ */
-    font-size: 2.2vw;  /* ラベルのフォントサイズ */
-}
-
-.self-introduction dd {
-    text-align: left;              /* 値を左寄せ */
-    margin: 0;                     /* 余白をリセット */
-    font-size: 2.2vw;  /* 値のフォントサイズ */
-}
-
 /* hobbyセクション
 ---------------------- */
 
-.hoby.section {
+.hobby.section {
     padding: 2vw 5vw; /* セクションの上下に2%、左右に5%の余白を追加 */
     background: rgba(255, 255, 255, 0.8); /* 背景色を薄い白に設定 */
     border-radius: 0.5vw; /* 角を丸くする */
@@ -305,68 +259,7 @@ img {
     
 }
 
-/* モバイル用プログラム 
----------------------- */
 
-@media (max-width: 768px) {
-    .logo {
-        width: 8vw;
-        max-width: none;
-    }
-    .logo-text {
-        font-size: 1.9vw;
-        padding-left: 2vw;
-    }
-    .nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 2vw;
-    }
-    .nav ul li a {
-        font-size: 4vw;
-    }
-    .page-title {
-        font-size: 4vw;
-        padding-left: 2vw;
-        text-align: left;
-    }
-    #self-introduction {
-        font-size: 3vw;
-        padding-left: 2vw;
-        text-align: left;
-    }
-    .header {
-        padding: 2vw 4vw;
-    }
-    .footer {
-        font-size: 2.5vw;
-        padding: 4vw 0;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .nav ul {
-        display: none;
-        background: #fff;
-        position: absolute;
-        top: 60vw;
-        right: 0;
-        width: 80vw;
-        box-shadow: 0 2vw 8vw rgba(0,0,0,0.1);
-        padding: 20px 0;
-    }
-    .nav.open ul {
-        display: flex;
-    }
-    .title-row {
-        display: flex;
-        flex-direction: column;      /* 縦並び */
-        align-items: flex-start;     /* 横方向：左寄せ*/
-        justify-content: center;     /* 縦方向：中央寄せ */
-        min-height: 100vw;            /* セクションの高さ。お好みで調整 */
-        margin-left: 5vw;            /* 左側の余白を5vwに設定 */
-    }
-}
 /* ハンバーガーメニュー用 */
 .menu-btn {
     display: none;
@@ -402,6 +295,83 @@ img {
     top: 10px;
 }
 
+/* モバイル用プログラム 
+---------------------- */
+
+@media (max-width: 768px) {
+    .logo {
+        width: 8vw;
+        max-width: none;
+    }
+    .logo-text {
+        font-size: 1.9vw;
+        padding-left: 2vw;
+    }
+
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        /*position: absolute;
+        top: 100%;
+        right: 0;
+        width: 70vw;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 1001;
+        padding: 20vw 0;
+        */
+    }
+
+    .nav ul li a {
+        font-size: 4vw;
+    }
+    .page-title {
+        font-size: 4vw;
+        padding-left: 2vw;
+        text-align: left;
+    }
+    #self-introduction {
+        font-size: 3vw;
+        padding-left: 2vw;
+        text-align: left;
+    }
+    .header {
+        padding: 2vw 4vw;
+    }
+    .footer {
+        font-size: 2.5vw;
+        padding: 4vw 0;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 1002;
+    }
+    
+    .nav.open ul {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 70vw;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 1001;
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .title-row {
+        display: flex;
+        flex-direction: column;      /* 縦並び */
+        align-items: flex-start;     /* 横方向：左寄せ*/
+        justify-content: center;     /* 縦方向：中央寄せ */
+        min-height: 100vw;            /* セクションの高さ。お好みで調整 */
+        margin-left: 5vw;            /* 左側の余白を5vwに設定 */
+    }
+}
+
+
 /* スマホ用 */
 @media (max-width: 768px) {
     .logo-text {
@@ -418,79 +388,14 @@ img {
         align-items: flex-start; /* スマホでは左寄せ */
         margin-right: 0;         /* 右余白をリセット */
     }
-
+    
     .page-title,
     dl {
         text-align: left;        /* テキストを左寄せ */
     }
 }
 
-@media (max-width: 768px) {
-    .self-introduction .title-row {
-        flex-direction: column; /* 縦並びに変更 */
-        align-items: right;    /* 右寄せ */
-    }
 
-    .self-introduction dl {
-        text-align: right;     /* テキストを右寄せ */
-    }
-
-    .self-introduction dl {
-        font-size: 4vw; /* 小さい画面ではテキストサイズを大きく */
-    }
-
-    .self-introduction dt {
-        font-size: 4.5vw; /* ラベルのフォントサイズを調整 */
-    }
-
-    .self-introduction dd {
-        font-size: 4vw; /* 値のフォントサイズを調整 */
-    }
-
-    .self-introduction .selfie {
-        width: 35%; /* 画像の幅を調整 */
-        max-width: none; /* 最大幅の制限を解除 */
-        right: 0; /* 位置をリセット */
-        transform: translateX(0); /* 位置をリセット */
-        margin-top: 2vw; /* 上に余白を追加 */
-        margin-bottom: 4vw; /* 下に余白を追加 */
-    }
-}
-
-/* スマホ時のみハンバーガーメニュー表示 */
-
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-    .nav ul {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        position: absolute;
-        top: 60vw;
-        right: 0;
-        width: 200vw;
-        box-shadow: 0 2vw 8vw rgba(0,0,0,0.1);
-        padding: 20vw 0;
-    }
-    .nav.open ul {
-        display: flex;
-    }
-}
-@media (min-width: 769px) {
-    .menu-btn {
-        display: none;
-    }
-    .nav ul {
-        display: flex !important;
-        position: static;
-        background: none;
-        box-shadow: none;
-        flex-direction: row;
-        padding: 0;
-    }
-}
 
 
 

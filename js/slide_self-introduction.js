@@ -3,7 +3,7 @@ const slider = document.querySelector('.slider');
   let direction = 1; // 1 右へ移動
 
   function animate() {
-    position += direction * 0.4; // 速度
+    position += direction * 0.05; // 速度
     slider.style.left = `-${position}px`;
 
     const maxSlide = window.innerWidth;
