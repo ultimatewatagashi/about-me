@@ -1,9 +1,10 @@
-const slider = document.querySelector('.slider');
+
+  const slider = document.querySelector('.slider');
   let position = 0;
-  let direction = 1; // 1 右へ移動
+  let direction = 1; // 1:右へ移動
 
   function animate() {
-    position += direction * 0.4; // 速度
+    position += direction * 1; // 速度
     slider.style.left = `-${position}px`;
 
     const maxSlide = window.innerWidth;

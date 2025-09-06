@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me</title>
-        <meta name="discription" content="わたしの自己紹介サイトです。なんでも載っています。">
+        <meta name="description" content="わたしの自己紹介サイトです。なんでも載っています。">
 
     <!-- ファビコン -->
         <link rel="icon" type="image/png" href="images/favicon2.ico">
@@ -14,7 +14,8 @@
 	    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
 
     <!-- オリジナルCSS -->
-        <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/background _hobby.css">
 
     <!-- Googleフォント -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +23,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     
     <!-- 背景処理読み込み　-->
-        <link rel="stylesheet" href="css/background.css">
 <!--
         <div class="slider-container">
             <div class="slider"></div>
         </div>
         <script src="js/slide.js"></script>  JavaScript -->
+    
+
         
     </head>
 
@@ -37,14 +39,19 @@
             <header class="header">
                 <h1 class="logo-title">
                    <a href="index.html" class="logo-link">
-                        <img class="logo" src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
+                        <img class="logo"src="images/myhousemark.kirinuki.png" alt="私の自己紹介サイト">
                         <span class="logo-text">ひとり語り帖</span>
                     </a>
                 </h1>
-                <nav class="nav">
+                <button class="menu-btn" id="menu-btn" aria-label="メニューを開く">
+                    <span class="menu-icon"></span>
+                </button>
+                <nav class="nav" id="nav">
                     <ul>
+                        <li><a href="index.html">表</a></li>
                         <li><a href="self-introduction.html">自己紹介</a></li>
-                        <li><a href="hobby">趣味・興味</a></li>
+                        <li><a href="hobby.html" style="color: #B11226 !important;">趣味・興味</a></li>
+                        <li><a href="recordsofancestors">ご先祖の記録</a></li>
                         <li><a href="inquiry.html">お問い合わせ</a></li>
     
                     </ul>
@@ -55,14 +62,27 @@
             <div class="slider-container">
                 <div class="slider"></div>
             </div>
-            <script src="js/slide.js"></script> <!-- 背景スライド用js -->
+            <script src="js/slide_hobby.js"></script> <!-- 背景スライド用js -->
             
-            <div class="title-row">
-                <h2 class="page-title fade-in">ようこそ、わたしの間へ</h2>
-                <h3 id="self-introduction" class="fade-in">
-                <span class="section-content"></span>
-                </h3>
-            </div>
+            <section class="hobby-section">
+                <h2></h2>
+                <article>
+                    <h3>サイクリング</h3>
+                    <p>週末によく長距離を走っています。</p>
+                    <p>まだ体力がないので直線距離80kmの実家まで帰ったのが最大距離です。</p>
+                    <img src="images/mybike.jpg" alt="現在愛用中の自転車" class="hobby-image">
+                </article>
+                <article>
+                    <h3>ゲーム</h3>
+                    <p>FPSやオープンワールド系が好きで、最近はAPEXや原神にハマっています。</p>
+                    <p>原神の推しはタルタリヤです。</p>
+                </article>
+                <article>
+                    <h3>PCいじり</h3>
+                    <p>パソコンを組んだり、オーバークロックするのが好きです。</p>
+                    <img src="" alt="自作PCの写真">
+                </article>
+            </section>
     
             <script src="js/self-introduction.js"></script>
             <script src="js/menu.js"></script>
